@@ -8,6 +8,6 @@ interface ImageRepository {
     fun like(imageId: String)
     fun dislike(imageId: String)
     fun addImage(image: Image)
-    fun getImages(): List<Image>
+    fun getImages(completion: (List<Image>) -> Unit)
     fun getImageDetails(imageId: String): Image
 }

@@ -41,7 +41,7 @@ class ImageRepositoryImpl: ImageRepository {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
-    override fun getImages(): List<Image> {
+    override fun getImages(completion: (List<Image>) -> Unit) {
         val imageList = mutableListOf<Image>()
 
         imageCollection.get().addOnCompleteListener {
@@ -53,11 +53,11 @@ class ImageRepositoryImpl: ImageRepository {
                         Log.e(LOG_TAG, "Error no such document")
                     }
                 }
+                completion(imageList)
             } else {
                 Log.e(LOG_TAG, "Error downloading images")
             }
         }
-        return imageList
     }
 
     override fun getImageDetails(imageId: String): Image {
