@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "156895763549",
+    "firebase_url": "https://quackathon-410c2.firebaseio.com",
+    "project_id": "quackathon-410c2",
+    "storage_bucket": "quackathon-410c2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:156895763549:android:a8e089ead3e938b7",
+        "android_client_info": {
+          "package_name": "com.sv.quackathon"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "156895763549-nhmee11ul6g44dj2rl7c4pae0p2d8n8s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDH0CV6-7cYjMij-hDrA_a8DPiqRP0v5qE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
