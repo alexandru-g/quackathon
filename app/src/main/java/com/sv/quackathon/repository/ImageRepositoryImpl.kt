@@ -3,6 +3,7 @@ package com.sv.quackathon.repository
 import android.util.Log
 import com.google.firebase.firestore.FirebaseFirestore
 import com.sv.quackathon.model.Image
+import java.nio.InvalidMarkException
 
 class ImageRepositoryImpl: ImageRepository {
     val LOG_TAG = ImageRepositoryImpl::class.java.simpleName
@@ -33,12 +34,14 @@ class ImageRepositoryImpl: ImageRepository {
 
     }
 
-    override fun like(imageId: String) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    override fun like(image: Image) {
+        val newLikesCount =+ image.likesCount + 1
+        imageCollection.document(image.id).update("likes", newLikesCount)
     }
 
-    override fun dislike(imageId: String) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    override fun dislike(image: Image) {
+        val newDislikesCount =+ image.dislikesCount + 1
+        imageCollection.document(image.id).update("dislikesCount", newDislikesCount)
     }
 
     override fun getImages(completion: (List<Image>) -> Unit) {
